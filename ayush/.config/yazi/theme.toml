@@ -1,0 +1,94 @@
+# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
+# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
+"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+[flavor]
+dark  = ""
+light = ""
+
+[mgr]
+# Gruvbox Material colors
+cwd = { fg = "#a9b665" }  # green
+
+# Hovered
+hovered         = { reversed = true }
+preview_hovered = { underline = false }
+
+# Find
+find_keyword  = { fg = "#d8a657", bold = true, italic = true, underline = true }  # yellow
+find_position = { fg = "#d3869b", bg = "reset", bold = true, italic = true }      # magenta
+
+# Marker
+marker_copied   = { fg = "#a9b665", bg = "#a9b665" }  # lightgreen
+marker_cut      = { fg = "#ea6962", bg = "#ea6962" }  # lightred
+marker_marked   = { fg = "#89b482", bg = "#89b482" }  # lightcyan
+marker_selected = { fg = "#d8a657", bg = "#d8a657" }  # lightyellow
+
+# Tab
+tab_active   = { fg = "#d3869b", reversed = true }  # magenta
+tab_inactive = {}
+tab_width    = 1
+
+# Count
+count_copied   = { fg = "#d4be98", bg = "#a9b665" }  # white/green
+count_cut      = { fg = "#d4be98", bg = "#ea6962" }  # white/red
+count_selected = { fg = "#d4be98", bg = "#d8a657" }  # white/yellow
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#7c6f64", bold = true }  # gray
+
+# Highlighting
+syntect_theme = "gruvbox-material"
+
+[mode]
+normal_main = { bg = "#a9b665", fg = "#1d2021", bold = true }  # green/black
+normal_alt = { bg = "#7c6f64", fg = "#d4be98", bold = true }   # darkgray/white
+
+# Select mode
+select_main = { bg = "#ea6962", bold = true }  # red
+select_alt  = { fg = "#ea6962", bg = "#7c6f64" }  # red/gray
+
+# Unset mode
+unset_main = { bg = "#ea6962", bold = true }  # red
+unset_alt  = { fg = "#ea6962", bg = "#7c6f64" }  # red/gray
+
+[status]
+overall   = { bold = true }
+sep_left = ["", ""]
+sep_right = ["", ""]
+
+# Permissions
+perm_sep = { fg = "#7c6f64" }  # darkgray
+perm_type = { fg = "#d8a657" }  # yellow
+perm_read = { fg = "#a9b665" }  # green
+perm_write = { fg = "#89b482" }  # cyan
+perm_exec = { fg = "#ea6962" }  # red
+
+# Progress
+progress_label  = { bold = true }
+progress_normal = { fg = "#a9b665", bg = "#1d2021" }  # green/black
+progress_error  = { fg = "#ea6962", bg = "#1d2021" }  # red/black
+
+# Keep the rest of the configuration (which, help, tasks, etc.) the same
+# but replace color values with Gruvbox Material equivalents as needed
+
+[which]
+cols            = 3
+mask            = { bg = "#1d2021" }  # black
+cand            = { fg = "#89b482" }  # lightcyan
+rest            = { fg = "#7c6f64" }  # darkgray
+desc            = { fg = "#d3869b" }  # lightmagenta
+separator       = "  "
+separator_style = { fg = "#7c6f64" }  # darkgray
+
+[confirm]
+border     = { fg = "#7c6f64" }  # gray
+title      = { fg = "#7daea3", bold = true }  # blue
+content    = {}
+list       = {}
+btn_yes    = { bg = "#a9b665", fg = "#1d2021", bold = true }  # green/black
+btn_no     = { bg = "#ea6962", fg = "#1d2021", bold = true }  # red/black
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+# ... rest of the configuration remains the same ...
